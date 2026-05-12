@@ -1,600 +1,758 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Nutr-Nova | HYALUFILL-C • Vitamin C & Hyaluronic Radiance Serum</title>
+    <!-- ========== SEO META TAGS ========== -->
+    <title>Nutr-Nova | HYALUFILL-C - Vitamin C & Hyaluronic Acid Whitening Moisturizer Serum</title>
+    <meta name="description" content="Nutr-Nova presents HYALUFILL-C: a premium Vitamin C and Hyaluronic Acid serum for skin whitening, deep moisturizing, and radiant glow. Dual-action brightening formula.">
+    <meta name="keywords" content="Nutr-Nova, HYALUFILL-C, Vitamin C serum, hyaluronic acid, whitening moisturizer, skin brightening, cosmetics, skincare, anti-dark spots, hydration">
+    <meta name="author" content="Nutr-Nova Cosmetics">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.nutrnova.com/hyalu-fill-c">
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Nutr-Nova HYALUFILL-C | Vitamin C & Hyaluronic Acid Serum">
+    <meta property="og:description" content="Discover Nutr-Nova HYALUFILL-C: the ultimate whitening and moisturizing serum infused with Vitamin C and Hyaluronic Acid for luminous, hydrated skin.">
+    <meta property="og:image" content="https://i.postimg.cc/Y0bptP2F/1778587948973.png">
+    <meta property="og:url" content="https://www.nutrnova.com/hyalu-fill-c">
+    <meta property="og:type" content="product">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nutr-Nova HYALUFILL-C | Vitamin C & Hyaluronic Acid Serum">
+    <meta name="twitter:description" content="Nutr-Nova HYALUFILL-C: Vitamin C and Hyaluronic Acid whitening moisturizer for radiant, even-toned skin.">
+    <meta name="twitter:image" content="https://i.postimg.cc/Y0bptP2F/1778587948973.png">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', 'Helvetica Neue', sans-serif;
+        background: #faf9f7;
+        color: #2e2b2b;
+        line-height: 1.5;
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-weight: 350;
+        letter-spacing: -0.3px;
+      }
+
+      h1 {
+        font-size: clamp(2.8rem, 6vw, 4.5rem);
+        line-height: 1.1;
+        font-weight: 300;
+      }
+
+      h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+      }
+
+      /* ========== SKIP TO CONTENT - Accessibility ========== */
+      .skip-to-content {
+        position: absolute;
+        top: -100px;
+        left: 1rem;
+        background: #b76e4b;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        z-index: 1000;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: top 0.3s;
+      }
+
+      .skip-to-content:focus {
+        top: 1rem;
+      }
+
+      /* ========== HEADER WITH NAV ABOVE LOGO ========== */
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.2rem 0 1rem;
+        background: transparent;
+        position: relative;
+        z-index: 10;
+        width: 100%;
+      }
+
+      /* Navigation on top */
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        aria-label: "Main navigation";
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #4a4a4a;
+        margin: 0 1.5rem;
+        font-size: 0.95rem;
+        font-weight: 350;
+        letter-spacing: 0.8px;
+        transition: color 0.25s ease;
+        text-transform: uppercase;
+        position: relative;
+      }
+
+      nav a::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: #b76e4b;
+        transition: width 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #b76e4b;
+      }
+
+      nav a:hover::after {
+        width: 100%;
+      }
+
+      /* Logo below navigation - takes 80% of screen width */
+      .logo-link {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80vw;
+        max-width: 1000px;
+      }
+
+      .logo-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+
+      .logo-img:hover {
+        opacity: 0.88;
+        transform: scale(1.02);
+      }
+
+      /* ========== FULL WIDTH PRODUCT HERO ========== */
+      .product-hero-fullwidth {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        background: linear-gradient(180deg, #faf9f7 0%, #f3ede7 30%, #ebe1d7 100%);
+        padding: 2rem 0 5rem;
+        overflow: hidden;
+      }
+
+      .product-hero-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 3rem;
+      }
+
+      .product-image-wrapper {
+        flex: 1 1 480px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .product-image {
+        max-width: 100%;
+        height: auto;
+        max-height: 600px;
+        object-fit: contain;
+        filter: drop-shadow(0 30px 50px rgba(160, 120, 90, 0.25));
+        transition: transform 0.5s ease;
+        animation: floatSlow 5s ease-in-out infinite;
+      }
+
+      @keyframes floatSlow {
+
+        0%,
+        100% {
+          transform: translateY(0px);
         }
 
-        body {
-            font-family: 'Inter', 'Helvetica Neue', sans-serif;
-            background: #faf9f7;
-            color: #2e2b2b;
-            line-height: 1.5;
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
+        50% {
+          transform: translateY(-12px);
         }
+      }
 
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+      .product-info {
+        flex: 1 1 380px;
+        padding: 1rem 0;
+      }
 
-        h1, h2, h3 {
-            font-weight: 350;
-            letter-spacing: -0.3px;
-        }
+      .product-badge {
+        display: inline-block;
+        background: rgba(220, 190, 170, 0.25);
+        backdrop-filter: blur(8px);
+        padding: 0.6rem 1.4rem;
+        border-radius: 40px;
+        font-size: 0.82rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #5e4b3c;
+        margin-bottom: 1.8rem;
+        border: 1px solid rgba(183, 110, 75, 0.2);
+      }
 
-        h1 {
-            font-size: clamp(2.8rem, 6vw, 4.5rem);
-            line-height: 1.1;
-            font-weight: 300;
-        }
+      .product-info h1 {
+        margin-bottom: 1.2rem;
+        color: #212121;
+      }
 
-        h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 300;
-            margin-bottom: 1.5rem;
-        }
+      /* SEO: Product name clearly visible in text */
+      .product-name-seo {
+        font-weight: 300;
+        font-size: 1.8rem;
+        display: block;
+        margin-top: 0.3rem;
+      }
 
-        .brand {
-            font-family: 'Cormorant Garamond', 'Times New Roman', serif;
-            letter-spacing: 2px;
-            font-weight: 400;
-            text-transform: uppercase;
-        }
+      .hero-sub {
+        font-size: 1.25rem;
+        font-weight: 300;
+        color: #5c534d;
+        margin-bottom: 2.2rem;
+        max-width: 460px;
+        line-height: 1.6;
+      }
 
-        /* ========== HEADER WITH NAV ABOVE LOGO ========== */
-        header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 1.2rem 0 1rem;
-            background: transparent;
-            position: relative;
-            z-index: 10;
-            width: 100%;
-        }
+      .cta-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+        align-items: center;
+      }
 
-        /* Navigation on top */
+      .btn-primary {
+        background: #b76e4b;
+        border: none;
+        color: white;
+        padding: 1.05rem 2.6rem;
+        border-radius: 50px;
+        font-size: 0.95rem;
+        font-weight: 400;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 20px rgba(183, 110, 75, 0.15);
+        text-decoration: none;
+        display: inline-block;
+        border: 1px solid transparent;
+      }
+
+      .btn-primary:hover {
+        background: #a05a3c;
+        box-shadow: 0 14px 28px rgba(183, 110, 75, 0.28);
+        transform: translateY(-2px);
+      }
+
+      .btn-outline {
+        background: transparent;
+        border: 1px solid #c9b6a8;
+        color: #4f3e32;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: 0.3s;
+        text-decoration: none;
+        backdrop-filter: blur(4px);
+      }
+
+      .btn-outline:hover {
+        border-color: #b76e4b;
+        color: #b76e4b;
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      /* ========== BENEFITS STRIP ========== */
+      .benefits-strip {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 2rem;
+        margin: 3.5rem 0 2.5rem;
+        padding: 2.2rem 0;
+        border-top: 1px solid #e3d9d0;
+        border-bottom: 1px solid #e3d9d0;
+      }
+
+      .benefit-item {
+        text-align: center;
+        flex: 1 1 150px;
+      }
+
+      .benefit-item h4 {
+        font-weight: 400;
+        letter-spacing: 1.8px;
+        font-size: 0.88rem;
+        text-transform: uppercase;
+        color: #5e4b3c;
+        margin-bottom: 0.5rem;
+      }
+
+      .benefit-item p {
+        font-weight: 300;
+        color: #6b5e53;
+        font-size: 0.95rem;
+      }
+
+      /* ========== INGREDIENTS SECTION ========== */
+      .ingredient-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3.5rem;
+        margin: 5.5rem 0;
+        align-items: center;
+      }
+
+      .ingredient-text {
+        flex: 1 1 320px;
+      }
+
+      .ingredient-text h2 {
+        margin-bottom: 1.6rem;
+      }
+
+      .ingredient-text p {
+        font-weight: 300;
+        color: #4b4139;
+        margin-bottom: 2rem;
+        font-size: 1.08rem;
+        line-height: 1.7;
+      }
+
+      .highlight-list {
+        list-style: none;
+      }
+
+      .highlight-list li {
+        margin-bottom: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        font-weight: 350;
+      }
+
+      .highlight-list li::before {
+        content: "•";
+        color: #b76e4b;
+        font-size: 1.7rem;
+        line-height: 1;
+      }
+
+      .ingredient-visual {
+        flex: 1 1 280px;
+        border-radius: 50%;
+        height: 270px;
+        width: 270px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(145deg, #f5ede4, #e7d7ca);
+        box-shadow: 20px 20px 45px #d9cbc0, -15px -15px 35px #ffffffd6;
+        font-style: italic;
+        color: #6e5543;
+        font-size: 1.25rem;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      /* ========== PRODUCT DETAILS (SEO TEXT) ========== */
+      .product-details-seo {
+        background: #ffffff;
+        border-radius: 30px;
+        padding: 3rem 2.5rem;
+        margin: 3rem 0;
+        border: 1px solid #f0e8e0;
+      }
+
+      .product-details-seo h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .product-specs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .spec-card {
+        text-align: center;
+        padding: 1.5rem;
+        background: #faf9f7;
+        border-radius: 20px;
+      }
+
+      .spec-card h3 {
+        font-weight: 400;
+        font-size: 1.1rem;
+        color: #b76e4b;
+        margin-bottom: 0.5rem;
+        letter-spacing: 1px;
+      }
+
+      .spec-card p {
+        font-weight: 300;
+        color: #5c534d;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      /* ========== TESTIMONIAL ========== */
+      .testimonial {
+        background: #ffffff;
+        border-radius: 30px;
+        padding: 3.2rem 2.8rem;
+        margin: 4.5rem 0;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.02);
+        text-align: center;
+        border: 1px solid #f0e8e0;
+      }
+
+      .testimonial p {
+        font-size: 1.35rem;
+        font-weight: 300;
+        font-style: italic;
+        color: #3e362f;
+        max-width: 720px;
+        margin: 0 auto 1.3rem;
+        line-height: 1.6;
+      }
+
+      .testimonial span {
+        font-weight: 400;
+        letter-spacing: 1.3px;
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        color: #b76e4b;
+      }
+
+      /* ========== FOOTER ========== */
+      footer {
+        text-align: center;
+        padding: 2.8rem 0;
+        border-top: 1px solid #e8dfd6;
+        color: #7f7266;
+        font-weight: 300;
+        font-size: 0.9rem;
+        letter-spacing: 0.8px;
+        margin-top: 1.5rem;
+      }
+
+      .footer-logo-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.2rem;
+      }
+
+      .footer-logo {
+        width: 60vw;
+        max-width: 700px;
+        height: auto;
+        opacity: 0.85;
+        transition: opacity 0.3s;
+      }
+
+      .footer-logo:hover {
+        opacity: 1;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 2.8rem;
+        margin-bottom: 1.4rem;
+        flex-wrap: wrap;
+      }
+
+      .footer-links a {
+        text-decoration: none;
+        color: #5f5247;
+        transition: color 0.2s;
+        font-size: 0.92rem;
+      }
+
+      .footer-links a:hover {
+        color: #b76e4b;
+      }
+
+      /* ========== SCHEMA MARKUP (visually hidden for SEO) ========== */
+      .schema-markup {
+        display: none;
+      }
+
+      /* ========== RESPONSIVE ========== */
+      @media (max-width: 768px) {
         nav {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-bottom: 1.5rem;
-            width: 100%;
+          margin-bottom: 1.2rem;
         }
 
         nav a {
-            text-decoration: none;
-            color: #4a4a4a;
-            margin: 0 1.5rem;
-            font-size: 0.95rem;
-            font-weight: 350;
-            letter-spacing: 0.8px;
-            transition: color 0.25s ease;
-            text-transform: uppercase;
-            position: relative;
+          margin: 0 0.8rem;
+          font-size: 0.85rem;
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: #b76e4b;
-            transition: width 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #b76e4b;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        /* Logo below navigation - takes 80% of screen width */
         .logo-link {
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 80vw;
-            max-width: 1000px;
+          width: 85vw;
         }
 
-        .logo-img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-        .logo-img:hover {
-            opacity: 0.88;
-            transform: scale(1.02);
-        }
-
-        /* ========== FULL WIDTH PRODUCT HERO ========== */
         .product-hero-fullwidth {
-            width: 100vw;
-            position: relative;
-            left: 50%;
-            right: 50%;
-            margin-left: -50vw;
-            margin-right: -50vw;
-            background: linear-gradient(180deg, #faf9f7 0%, #f3ede7 30%, #ebe1d7 100%);
-            padding: 2rem 0 5rem;
-            overflow: hidden;
-        }
-
-        .product-hero-inner {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 3rem;
-        }
-
-        .product-image-wrapper {
-            flex: 1 1 480px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
+          padding: 2rem 0 3rem;
         }
 
         .product-image {
-            max-width: 100%;
-            height: auto;
-            max-height: 600px;
-            object-fit: contain;
-            filter: drop-shadow(0 30px 50px rgba(160, 120, 90, 0.25));
-            transition: transform 0.5s ease;
-            animation: floatSlow 5s ease-in-out infinite;
-        }
-
-        @keyframes floatSlow {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-12px); }
-        }
-
-        .product-info {
-            flex: 1 1 380px;
-            padding: 1rem 0;
-        }
-
-        .product-badge {
-            display: inline-block;
-            background: rgba(220, 190, 170, 0.25);
-            backdrop-filter: blur(8px);
-            padding: 0.6rem 1.4rem;
-            border-radius: 40px;
-            font-size: 0.82rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #5e4b3c;
-            margin-bottom: 1.8rem;
-            border: 1px solid rgba(183, 110, 75, 0.2);
-        }
-
-        .product-info h1 {
-            margin-bottom: 1.2rem;
-            color: #212121;
-        }
-
-        .hero-sub {
-            font-size: 1.25rem;
-            font-weight: 300;
-            color: #5c534d;
-            margin-bottom: 2.2rem;
-            max-width: 460px;
-            line-height: 1.6;
-        }
-
-        .cta-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.2rem;
-            align-items: center;
-        }
-
-        .btn-primary {
-            background: #b76e4b;
-            border: none;
-            color: white;
-            padding: 1.05rem 2.6rem;
-            border-radius: 50px;
-            font-size: 0.95rem;
-            font-weight: 400;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(183, 110, 75, 0.15);
-            text-decoration: none;
-            display: inline-block;
-            border: 1px solid transparent;
-        }
-
-        .btn-primary:hover {
-            background: #a05a3c;
-            box-shadow: 0 14px 28px rgba(183, 110, 75, 0.28);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 1px solid #c9b6a8;
-            color: #4f3e32;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: 0.3s;
-            text-decoration: none;
-            backdrop-filter: blur(4px);
-        }
-
-        .btn-outline:hover {
-            border-color: #b76e4b;
-            color: #b76e4b;
-            background: rgba(255,255,255,0.5);
-        }
-
-        /* ========== BENEFITS STRIP ========== */
-        .benefits-strip {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 2rem;
-            margin: 3.5rem 0 2.5rem;
-            padding: 2.2rem 0;
-            border-top: 1px solid #e3d9d0;
-            border-bottom: 1px solid #e3d9d0;
-        }
-
-        .benefit-item {
-            text-align: center;
-            flex: 1 1 150px;
-        }
-
-        .benefit-item h4 {
-            font-weight: 400;
-            letter-spacing: 1.8px;
-            font-size: 0.88rem;
-            text-transform: uppercase;
-            color: #5e4b3c;
-            margin-bottom: 0.5rem;
-        }
-
-        .benefit-item p {
-            font-weight: 300;
-            color: #6b5e53;
-            font-size: 0.95rem;
-        }
-
-        /* ========== INGREDIENTS SECTION ========== */
-        .ingredient-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 3.5rem;
-            margin: 5.5rem 0;
-            align-items: center;
-        }
-
-        .ingredient-text {
-            flex: 1 1 320px;
-        }
-
-        .ingredient-text h2 {
-            margin-bottom: 1.6rem;
-        }
-
-        .ingredient-text p {
-            font-weight: 300;
-            color: #4b4139;
-            margin-bottom: 2rem;
-            font-size: 1.08rem;
-            line-height: 1.7;
-        }
-
-        .highlight-list {
-            list-style: none;
-        }
-
-        .highlight-list li {
-            margin-bottom: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.9rem;
-            font-weight: 350;
-        }
-
-        .highlight-list li::before {
-            content: "•";
-            color: #b76e4b;
-            font-size: 1.7rem;
-            line-height: 1;
-        }
-
-        .ingredient-visual {
-            flex: 1 1 280px;
-            border-radius: 50%;
-            height: 270px;
-            width: 270px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(145deg, #f5ede4, #e7d7ca);
-            box-shadow: 20px 20px 45px #d9cbc0, -15px -15px 35px #ffffffd6;
-            font-style: italic;
-            color: #6e5543;
-            font-size: 1.25rem;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        /* ========== TESTIMONIAL ========== */
-        .testimonial {
-            background: #ffffff;
-            border-radius: 30px;
-            padding: 3.2rem 2.8rem;
-            margin: 4.5rem 0;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.02);
-            text-align: center;
-            border: 1px solid #f0e8e0;
-        }
-
-        .testimonial p {
-            font-size: 1.35rem;
-            font-weight: 300;
-            font-style: italic;
-            color: #3e362f;
-            max-width: 720px;
-            margin: 0 auto 1.3rem;
-            line-height: 1.6;
-        }
-
-        .testimonial span {
-            font-weight: 400;
-            letter-spacing: 1.3px;
-            font-size: 0.82rem;
-            text-transform: uppercase;
-            color: #b76e4b;
-        }
-
-        /* ========== FOOTER ========== */
-        footer {
-            text-align: center;
-            padding: 2.8rem 0;
-            border-top: 1px solid #e8dfd6;
-            color: #7f7266;
-            font-weight: 300;
-            font-size: 0.9rem;
-            letter-spacing: 0.8px;
-            margin-top: 1.5rem;
-        }
-
-        .footer-logo-wrapper {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 1.2rem;
+          max-height: 400px;
         }
 
         .footer-logo {
-            width: 60vw;
-            max-width: 700px;
-            height: auto;
-            opacity: 0.85;
-            transition: opacity 0.3s;
-        }
-        .footer-logo:hover {
-            opacity: 1;
+          width: 70vw;
         }
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2.8rem;
-            margin-bottom: 1.4rem;
-            flex-wrap: wrap;
+        .product-specs-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 480px) {
+        nav a {
+          margin: 0 0.5rem;
+          font-size: 0.78rem;
+          letter-spacing: 0.5px;
         }
 
-        .footer-links a {
-            text-decoration: none;
-            color: #5f5247;
-            transition: color 0.2s;
-            font-size: 0.92rem;
+        .logo-link {
+          width: 90vw;
         }
 
-        .footer-links a:hover {
-            color: #b76e4b;
+        .container {
+          padding: 0 1.2rem;
         }
 
-        /* ========== RESPONSIVE ========== */
-        @media (max-width: 768px) {
-            nav {
-                margin-bottom: 1.2rem;
-            }
-            nav a {
-                margin: 0 0.8rem;
-                font-size: 0.85rem;
-            }
-            .logo-link {
-                width: 85vw;
-            }
-            .product-hero-fullwidth {
-                padding: 2rem 0 3rem;
-            }
-            .product-image {
-                max-height: 400px;
-            }
-            .footer-logo {
-                width: 70vw;
-            }
+        .product-hero-inner {
+          padding: 0 1.2rem;
         }
 
-        @media (max-width: 480px) {
-            nav a {
-                margin: 0 0.5rem;
-                font-size: 0.78rem;
-                letter-spacing: 0.5px;
-            }
-            .logo-link {
-                width: 90vw;
-            }
-            .container {
-                padding: 0 1.2rem;
-            }
-            .product-hero-inner {
-                padding: 0 1.2rem;
-            }
-            .product-image {
-                max-height: 320px;
-            }
-            .footer-logo {
-                width: 80vw;
-            }
+        .product-image {
+          max-height: 320px;
         }
 
-        /* smooth reveal effect */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(18px);
-            animation: fadeInUp 0.9s cubic-bezier(0.15, 0.85, 0.35, 1) forwards;
+        .footer-logo {
+          width: 80vw;
         }
+      }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+      /* smooth reveal effect */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(18px);
+        animation: fadeInUp 0.9s cubic-bezier(0.15, 0.85, 0.35, 1) forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
 
-        .delay-1 { animation-delay: 0.15s; }
-        .delay-2 { animation-delay: 0.3s; }
-        .delay-3 { animation-delay: 0.45s; }
+      .delay-1 {
+        animation-delay: 0.15s;
+      }
+
+      .delay-2 {
+        animation-delay: 0.3s;
+      }
+
+      .delay-3 {
+        animation-delay: 0.45s;
+      }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
-</head>
-<body>
+  </head>
+  <body>
+    <!-- Accessibility skip link -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
     <!-- HEADER WITH NAV ABOVE, LOGO BELOW -->
-    <header class="fade-in">
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Science</a>
-            <a href="#">Shop</a>
-            <a href="#">Journal</a>
-        </nav>
-        <a href="#" class="logo-link">
-            <img src="https://i.postimg.cc/tJ7TfyyK/1778312647923.png" alt="Nutr-Nova Cosmetics Logo" class="logo-img">
-        </a>
+    <header class="fade-in" role="banner">
+      <nav aria-label="Main navigation" role="navigation">
+        <a href="#">Home</a>
+        <a href="#">Science</a>
+        <a href="#">Shop</a>
+        <a href="#">Journal</a>
+      </nav>
+      <a href="#" class="logo-link" aria-label="Nutr-Nova Homepage">
+        <img src="https://i.postimg.cc/tJ7TfyyK/1778312647923.png" alt="Nutr-Nova Cosmetics Logo" class="logo-img">
+      </a>
     </header>
-
-    <!-- ========== FULL WIDTH PRODUCT HERO ========== -->
-    <section class="product-hero-fullwidth">
+    <main id="main-content">
+      <!-- ========== FULL WIDTH PRODUCT HERO ========== -->
+      <section class="product-hero-fullwidth" aria-labelledby="hero-heading">
         <div class="product-hero-inner">
-            <div class="product-image-wrapper fade-in delay-1">
-                <img 
-                    src="https://i.postimg.cc/Y0bptP2F/1778587948973.png" 
-                    alt="HYALUFILL-C Vitamin C & Hyaluronic Acid Serum Bottle" 
-                    class="product-image"
-                >
+          <div class="product-image-wrapper fade-in delay-1">
+            <img src="https://i.postimg.cc/Y0bptP2F/1778587948973.png" alt="Nutr-Nova HYALUFILL-C Vitamin C and Hyaluronic Acid Whitening Moisturizer Serum Bottle" class="product-image">
+          </div>
+          <div class="product-info fade-in delay-2">
+            <div class="product-badge">✨ Vitamin C + Hyaluronic Acid</div>
+            <!-- SEO: H1 includes company name and product name in text -->
+            <h1 id="hero-heading">Nutr-Nova HYALUFILL-C <span class="product-name-seo">Brightening moisture veil</span>
+            </h1>
+            <p class="hero-sub"> Nutr-Nova presents HYALUFILL-C: a delicate fusion of stabilized Vitamin C and multi-weight Hyaluronic Acid. Designed to awaken luminosity while drenching skin in lasting hydration. The ultimate whitening and moisturizing serum. </p>
+            <div class="cta-group">
+              <a href="#" class="btn-primary" aria-label="Discover HYALUFILL-C Serum">Discover the serum</a>
+              <a href="#" class="btn-outline" aria-label="View HYALUFILL-C Ingredients">Ingredients philosophy</a>
             </div>
-            <div class="product-info fade-in delay-2">
-                <div class="product-badge">✨ Vitamin C + Hyaluronic Acid</div>
-                <h1>HYALUFILL-C <br><span style="font-weight: 300; font-size: 1.8rem; display: block; margin-top: 0.3rem;">Brightening moisture veil</span></h1>
-                <p class="hero-sub">
-                    A delicate fusion of stabilized Vitamin C and multi-weight Hyaluronic Acid. 
-                    Designed to awaken luminosity while drenching skin in lasting hydration.
-                </p>
-                <div class="cta-group">
-                    <a href="#" class="btn-primary">Discover the serum</a>
-                    <a href="#" class="btn-outline">Ingredients philosophy</a>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
-
-    <!-- REST OF CONTENT WITHIN CONTAINER -->
-    <div class="container">
-        <main>
-            <div class="benefits-strip fade-in delay-3">
-                <div class="benefit-item">
-                    <h4>Whitening</h4>
-                    <p>L-ascorbic acid brightens</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>Plumping</h4>
-                    <p>Deep moisture reservoir</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>Radiance</h4>
-                    <p>Glow-from-within finish</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>Lightweight</h4>
-                    <p>Silky, non-sticky texture</p>
-                </div>
+      </section>
+      <!-- REST OF CONTENT WITHIN CONTAINER -->
+      <div class="container">
+        <!-- BENEFITS STRIP -->
+        <section class="benefits-strip fade-in delay-3" aria-label="Product benefits">
+          <div class="benefit-item">
+            <h4>Whitening</h4>
+            <p>Vitamin C brightens skin tone</p>
+          </div>
+          <div class="benefit-item">
+            <h4>Moisturizing</h4>
+            <p>Hyaluronic Acid deep hydration</p>
+          </div>
+          <div class="benefit-item">
+            <h4>Radiance</h4>
+            <p>Glow-from-within finish</p>
+          </div>
+          <div class="benefit-item">
+            <h4>Lightweight</h4>
+            <p>Silky, non-sticky texture</p>
+          </div>
+        </section>
+        <!-- INGREDIENTS SECTION -->
+        <section class="ingredient-section" aria-labelledby="ingredients-heading">
+          <div class="ingredient-text fade-in">
+            <h2 id="ingredients-heading">Dual-action brilliance.</h2>
+            <p> Nutr-Nova HYALUFILL-C combines pure Vitamin C (ascorbic acid) with triple-molecular Hyaluronic Acid. This synergy helps reduce uneven tone while maintaining a cushion of moisture that feels weightless on skin. </p>
+            <ul class="highlight-list">
+              <li>
+                <strong>10% Vitamin C complex</strong> – targets dark spots & dullness
+              </li>
+              <li>
+                <strong>Hyaluronic acid trio</strong> – surface & deep hydration
+              </li>
+              <li>
+                <strong>Fermented antioxidant</strong> – enhances skin clarity
+              </li>
+            </ul>
+          </div>
+          <div class="ingredient-visual fade-in delay-1" aria-hidden="true">
+            <p>vit C <br>+ <br>hyaluronic <br>synergy </p>
+          </div>
+        </section>
+        <!-- SEO: Product details clearly in text -->
+        <section class="product-details-seo fade-in" aria-labelledby="specs-heading">
+          <h2 id="specs-heading">HYALUFILL-C Product Details</h2>
+          <div class="product-specs-grid">
+            <div class="spec-card">
+              <h3>Product Name</h3>
+              <p>Nutr-Nova HYALUFILL-C Whitening & Moisturizing Serum</p>
             </div>
-
-            <section class="ingredient-section">
-                <div class="ingredient-text fade-in">
-                    <h2>Dual-action brilliance.</h2>
-                    <p>
-                        HYALUFILL-C combines pure Vitamin C (ascorbic acid) with triple-molecular Hyaluronic Acid. 
-                        This synergy helps reduce uneven tone while maintaining a cushion of moisture 
-                        that feels weightless on skin.
-                    </p>
-                    <ul class="highlight-list">
-                        <li><strong>10% Vitamin C complex</strong> – targets dark spots & dullness</li>
-                        <li><strong>Hyaluronic acid trio</strong> – surface & deep hydration</li>
-                        <li><strong>Fermented antioxidant</strong> – enhances skin clarity</li>
-                    </ul>
-                </div>
-                <div class="ingredient-visual fade-in delay-1">
-                    <p style="font-weight:300;">vit C<br>+<br>hyaluronic<br>synergy</p>
-                </div>
-            </section>
-
-            <div class="testimonial fade-in">
-                <p>"HYALUFILL-C gave my skin the most natural glass-like finish. It feels like a drink of water for the face, with visible brightness in just two weeks."</p>
-                <span>— Elina R., early adopter</span>
+            <div class="spec-card">
+              <h3>Key Ingredients</h3>
+              <p>Vitamin C (L-Ascorbic Acid), Hyaluronic Acid, Fermented Antioxidants</p>
             </div>
-        </main>
-    </div>
-
+            <div class="spec-card">
+              <h3>Skin Benefits</h3>
+              <p>Whitening, Deep Moisturizing, Brightening, Anti-Dark Spots, Hydration</p>
+            </div>
+            <div class="spec-card">
+              <h3>Brand</h3>
+              <p>Nutr-Nova Cosmetics - Premium Skincare Solutions</p>
+            </div>
+          </div>
+        </section>
+        <!-- TESTIMONIAL -->
+        <section class="testimonial fade-in" aria-labelledby="testimonial-heading">
+          <h2 id="testimonial-heading" style="font-size: 1.5rem; margin-bottom: 1.5rem;">What Our Customers Say</h2>
+          <p>"HYALUFILL-C by Nutr-Nova gave my skin the most natural glass-like finish. It feels like a drink of water for the face, with visible brightness in just two weeks."</p>
+          <span>— Elina R., verified customer</span>
+        </section>
+      </div>
+    </main>
     <!-- FULL WIDTH FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="footer-logo-wrapper">
-                <img src="https://i.postimg.cc/tJ7TfyyK/1778312647923.png" alt="Nutr-Nova" class="footer-logo">
-            </div>
-            <div class="footer-links">
-                <a href="#">Contact</a>
-                <a href="#">Shipping</a>
-                <a href="#">Philosophy</a>
-                <a href="#">Instagram</a>
-            </div>
-            <p>© 2025 Nutr-Nova. HYALUFILL-C is a trademark of Nutr-Nova. All rights reserved.</p>
+    <footer role="contentinfo">
+      <div class="container">
+        <div class="footer-logo-wrapper">
+          <img src="https://i.postimg.cc/tJ7TfyyK/1778312647923.png" alt="Nutr-Nova Cosmetics" class="footer-logo">
         </div>
+        <div class="footer-links">
+          <a href="#">Contact</a>
+          <a href="#">Shipping</a>
+          <a href="#">Philosophy</a>
+          <a href="#">Instagram</a>
+        </div>
+        <p>© 2026 Nutr-Nova. HYALUFILL-C Whitening & Moisturizing Serum is a trademark of Nutr-Nova Cosmetics. All rights reserved.</p>
+      </div>
     </footer>
-</body>
-</html>
+    <!-- ========== SCHEMA MARKUP FOR SEO (structured data) ========== -->
+    <script type="application/ld+json" class="schema-markup">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Nutr-Nova HYALUFILL-C Whitening & Moisturizing Serum",
+        "brand": {
+          "@type": "Brand",
+          "name": "Nutr-Nova"
+        },
+        "description": "Nutr-Nova HYALUFILL-C is a premium Vitamin C and Hyaluronic Acid serum designed for skin whitening, deep moisturizing, and radiant glow. Dual-action brightening formula with 10% Vitamin C complex and triple-molecular Hyaluronic Acid.",
+        "image": "https://i.postimg.cc/Y0bptP2F/1778587948973.png",
+        "url": "https://www.nutrnova.com/hyalu-fill-c",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+  </body>
+    </html>
